@@ -1,5 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# TASK 1
+# EXERCISE 1(C)
+
 def next_look_and_say(input_number):
-    # ... add your Python code here ...
+    # Convert number to text so we can count repeated digits.
     s = str(input_number)
     output = ""
     count = 1
@@ -22,7 +28,6 @@ assert next_look_and_say(1211) == 111221
 
 
 def investigate_look_and_say():
-    # ... add your Python code here ...
     # Build terms as strings so we can investigate many terms safely.
     terms = ["1"]
     n_terms = 50
