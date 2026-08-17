@@ -179,12 +179,16 @@ ORDER BY e.deptId DESC, e.name ASC;
 ```
 
 **Result (from provided sample data):**
-- Payne, J. | 30001 | D50  
-- Flavel, K. | 30001 | D30  
-- Wang, F. | 19001 | D30  
-- Keita, J. | 17000 | D10  
-- Patel, R. | 17000 | D10  
-- Smith, B. | 30001 | D10  
+```text
+NAME       | STARTSALARY | DEPTID
+-----------+-------------+-------
+Payne, J.  | 30001       | D50
+Flavel, K. | 30001       | D30
+Wang, F.   | 19001       | D30
+Keita, J.  | 17000       | D10
+Patel, R.  | 17000       | D10
+Smith, B.  | 30001       | D10
+```
 
 #### Query (b)
 **Question:** Number of employees in each pension scheme.
@@ -198,10 +202,14 @@ ORDER BY p.name;
 ```
 
 **Result:**
-- AXA | 0  
-- Premier | 3  
-- Stakeholder | 1  
-- Standard | 2  
+```text
+SCHEME_NAME | EMPLOYEE_COUNT
+------------+---------------
+AXA         | 0
+Premier     | 3
+Stakeholder | 1
+Standard    | 2
+```
 
 #### Query (c)
 **Question:** Total number of non-managers receiving annual salary over £35,000.
@@ -214,7 +222,11 @@ WHERE UPPER(e.job) <> 'MANAGER'
   AND s.finishSalary > 35000;
 ```
 
-**Result:** 1
+```text
+TOTAL_NON_MANAGERS_OVER_35K
+----------------------------
+1
+```
 
 #### Query (d)
 **Question:** Employee ID and name with manager name.
@@ -227,12 +239,16 @@ ORDER BY e.empId;
 ```
 
 **Result:**
-- E101 | Keita, J. | Smith, B.  
-- E102 | Patel, R. | Smith, B.  
-- E110 | Smith, B. | NULL  
-- E301 | Wang, F. | Flavel, K.  
-- E310 | Flavel, K. | NULL  
-- E501 | Payne, J. | Flavel, K.  
+```text
+EMPID | EMPLOYEE_NAME | MANAGER_NAME
+------+---------------+--------------
+E101  | Keita, J.     | Smith, B.
+E102  | Patel, R.     | Smith, B.
+E110  | Smith, B.     | NULL
+E301  | Wang, F.      | Flavel, K.
+E310  | Flavel, K.    | NULL
+E501  | Payne, J.     | Flavel, K.
+```
 
 ## Part A(3): Critical evaluation – Why Virgin moved from MySQL to MongoDB
 
@@ -525,40 +541,48 @@ The DDL and DML SQL scripts used are shown in Part A(2). Query outputs from exec
 
 ## Query (a) output
 
-| name       |   startSalary | deptId   |
-|------------|---------------|----------|
-| Payne, J.  |         30001 | D50      |
-| Flavel, K. |         30001 | D30      |
-| Wang, F.   |         19001 | D30      |
-| Keita, J.  |         17000 | D10      |
-| Patel, R.  |         17000 | D10      |
-| Smith, B.  |         30001 | D10      |
+```text
+NAME       | STARTSALARY | DEPTID
+-----------+-------------+-------
+Payne, J.  | 30001       | D50
+Flavel, K. | 30001       | D30
+Wang, F.   | 19001       | D30
+Keita, J.  | 17000       | D10
+Patel, R.  | 17000       | D10
+Smith, B.  | 30001       | D10
+```
 
 ## Query (b) output
 
-| scheme_name   |   employee_count |
-|---------------|------------------|
-| AXA           |                0 |
-| Premier       |                3 |
-| Stakeholder   |                1 |
-| Standard      |                2 |
+```text
+SCHEME_NAME | EMPLOYEE_COUNT
+------------+---------------
+AXA         | 0
+Premier     | 3
+Stakeholder | 1
+Standard    | 2
+```
 
 ## Query (c) output
 
-|   total_non_managers_over_35k |
-|-------------------------------|
-|                             1 |
+```text
+TOTAL_NON_MANAGERS_OVER_35K
+----------------------------
+1
+```
 
 ## Query (d) output
 
-| empId   | employee_name   | manager_name   |
-|---------|-----------------|----------------|
-| E101    | Keita, J.       | Smith, B.      |
-| E102    | Patel, R.       | Smith, B.      |
-| E110    | Smith, B.       | NULL           |
-| E301    | Wang, F.        | Flavel, K.     |
-| E310    | Flavel, K.      | NULL           |
-| E501    | Payne, J.       | Flavel, K.     |
+```text
+EMPID | EMPLOYEE_NAME | MANAGER_NAME
+------+---------------+--------------
+E101  | Keita, J.     | Smith, B.
+E102  | Patel, R.     | Smith, B.
+E110  | Smith, B.     | NULL
+E301  | Wang, F.      | Flavel, K.
+E310  | Flavel, K.    | NULL
+E501  | Payne, J.     | Flavel, K.
+```
 
 # Appendix C: Role Descriptor (Part C3)
 
