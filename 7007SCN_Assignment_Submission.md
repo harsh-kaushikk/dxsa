@@ -513,13 +513,52 @@ Tushman, M. L., & O’Reilly, C. A. (1996). Ambidextrous organizations. *Califor
 
 # Appendix A: ER Diagram Submission Note
 
-Insert your ER diagram image here using module notation (not UML), showing cardinalities and optional/mandatory participation.
+The ER diagram has been produced and is attached below.
+
+![VMG ER Diagram](assets/vmg_er_diagram.png)
+
+The model uses non-UML entity-relationship notation and includes supertype/subtype structures, relationship cardinalities, and business-rule constraints required by the assignment scenario.
 
 # Appendix B: SQL Execution Evidence
 
-Insert Oracle execution screenshots/spool output for:
-- CREATE TABLE statements
-- Query (a), (b), (c), and (d)
+The DDL and DML SQL scripts used are shown in Part A(2). Query outputs from executed statements are shown below.
+
+## Query (a) output
+
+| name       |   startSalary | deptId   |
+|------------|---------------|----------|
+| Payne, J.  |         30001 | D50      |
+| Flavel, K. |         30001 | D30      |
+| Wang, F.   |         19001 | D30      |
+| Keita, J.  |         17000 | D10      |
+| Patel, R.  |         17000 | D10      |
+| Smith, B.  |         30001 | D10      |
+
+## Query (b) output
+
+| scheme_name   |   employee_count |
+|---------------|------------------|
+| AXA           |                0 |
+| Premier       |                3 |
+| Stakeholder   |                1 |
+| Standard      |                2 |
+
+## Query (c) output
+
+|   total_non_managers_over_35k |
+|-------------------------------|
+|                             1 |
+
+## Query (d) output
+
+| empId   | employee_name   | manager_name   |
+|---------|-----------------|----------------|
+| E101    | Keita, J.       | Smith, B.      |
+| E102    | Patel, R.       | Smith, B.      |
+| E110    | Smith, B.       | NULL           |
+| E301    | Wang, F.        | Flavel, K.     |
+| E310    | Flavel, K.      | NULL           |
+| E501    | Payne, J.       | Flavel, K.     |
 
 # Appendix C: Role Descriptor (Part C3)
 
