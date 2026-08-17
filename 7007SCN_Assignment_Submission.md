@@ -28,7 +28,6 @@
    3.4 C4 GDPR and Data/AI Ethics  
 4. Conclusion  
 5. References  
-6. Appendices  
 
 \newpage
 
@@ -119,6 +118,10 @@ MedicationInteraction(**medicationCode1***, **medicationCode2***, severity)
 Illness(**illnessCode**, illnessDescription)  
 PatientIllness(**patientNo***, **illnessCode***)
 
+### ER Diagram (placed directly with Part A1)
+
+![VMG ER Diagram](assets/vmg_er_diagram.png)
+
 ### Justification of table generation
 
 Relational conversion follows established mapping rules: strong entities become tables; subtype entities inherit parent keys; many-to-many relationships become associative tables; recursive relationships become self-referencing structures (Connolly & Begg, 2014). Referential integrity constraints preserve clinical traceability, which is especially important for prescriptions and surgery events in healthcare contexts.
@@ -164,7 +167,7 @@ CREATE TABLE Employee (
 
 ### (a.1) Data population and execution evidence
 
-The sample records supplied in the guidance document were inserted into the four tables before query execution. To keep the main report focused, full INSERT statements and Oracle execution evidence (including successful DDL execution and query outputs) are provided in Appendix B as screenshots/spool output.
+The sample records supplied in the guidance document were inserted into the four tables before query execution. Full INSERT statements and execution outputs are presented directly within this Part A section.
 
 ### (b) Required SQL queries and outputs
 
@@ -451,7 +454,7 @@ For Virgin NanoLaunch, five attributes are critical:
 - **Boundary-spanning social capital** (Burt, 2004): bridge regulators, labs, suppliers, investors, and customers.  
 - **Psychological safety stewardship** (Edmondson, 1999): build high-quality challenge and learning behavior in teams.
 
-The role should therefore be designed as an entrepreneurial system role, not a conventional divisional manager. A full role descriptor is provided in Appendix C.
+The role should therefore be designed as an entrepreneurial system role, not a conventional divisional manager. The full role descriptor is provided immediately below.
 
 Critically, entrepreneurial leadership should not be reduced to charismatic communication. Renko et al. (2015) emphasize opportunity framing and resource mobilization under uncertainty, while Kirzner (1997) highlights alertness to previously overlooked value. In practice, this means the leader must repeatedly identify asymmetries that incumbents ignore: unmet mission profiles, underserved orbital segments, or integration opportunities between launch services and data-service partners.
 
@@ -463,7 +466,45 @@ The fourth element is social capital architecture. Burt’s (2004) structural ho
 
 Finally, ethical leadership competence must be explicit. Space ventures face dual-use concerns, safety obligations, and data governance complexity. The venture leader must establish clear decision rights, escalation pathways, and transparency norms so that speed does not displace accountability. In this sense, entrepreneurial leadership is a governance practice as much as an innovation practice.
 
-Drawing these attributes together, the role descriptor in Appendix C is designed as a capability system with four clusters: entrepreneurial cognition, technical-commercial integration, stakeholder orchestration, and culture leadership. This structure converts abstract leadership theory into recruitable criteria, developmental pathways, and measurable performance expectations.
+Drawing these attributes together, the role descriptor below is designed as a capability system with four clusters: entrepreneurial cognition, technical-commercial integration, stakeholder orchestration, and culture leadership. This structure converts abstract leadership theory into recruitable criteria, developmental pathways, and measurable performance expectations.
+
+### Role Descriptor: Chief Entrepreneurial Officer, Virgin NanoLaunch
+
+**Strategic Purpose:** Lead creation, validation, and scale-readiness of a low-cost small-satellite launch spin-out.
+
+#### Competency Cluster 1: Entrepreneurial Opportunity Leadership
+- Opportunity recognition under uncertainty  
+- Affordable-loss decision making  
+- Market sensing and pivot judgment
+
+#### Competency Cluster 2: Technical-Commercial Integration
+- Translate engineering milestones into commercial value  
+- Stage-gate discipline and mission assurance governance  
+- Systems thinking across product, operations, and risk
+
+#### Competency Cluster 3: Ecosystem and Stakeholder Orchestration
+- Regulator engagement and compliance coordination  
+- Partnerships with suppliers, research institutions, and anchor customers  
+- Investor and board communication under uncertainty
+
+#### Competency Cluster 4: Culture and Team Leadership
+- Psychological safety building in high-risk technical teams  
+- Cross-functional decision quality and conflict resolution  
+- Specialist talent attraction and retention
+
+#### KPIs
+- Gate progression performance  
+- Cost-to-launch trend and reliability metrics  
+- Signed customer commitments and repeat mission rate  
+- Regulatory milestone completion without major non-conformities  
+- Team psychological safety and specialist retention rate
+
+#### Person Specification
+- Proven leadership in early-stage complex technology ventures  
+- Strong understanding of aerospace/space operations and safety systems  
+- Ability to lead under uncertainty and constrained resources  
+- Strong ethical judgment and governance mindset  
+- High learning agility and stakeholder credibility
 
 ## C4) GDPR and data/AI ethics: constraint and enabler
 
@@ -524,113 +565,3 @@ Senge, P. M. (1990). *The fifth discipline*. Doubleday.
 Shane, S., & Venkataraman, S. (2000). The promise of entrepreneurship as a field of research. *Academy of Management Review, 25*(1), 217–226.  
 Teece, D. J. (2007). Explicating dynamic capabilities. *Strategic Management Journal, 28*(13), 1319–1350.  
 Tushman, M. L., & O’Reilly, C. A. (1996). Ambidextrous organizations. *California Management Review, 38*(4), 8–30.
-
-\newpage
-
-# Appendix A: ER Diagram Submission Note
-
-The ER diagram has been produced and is attached below.
-
-![VMG ER Diagram](assets/vmg_er_diagram.png)
-
-The model uses non-UML entity-relationship notation and includes supertype/subtype structures, relationship cardinalities, and business-rule constraints required by the assignment scenario.
-
-# Appendix B: SQL Execution Evidence
-
-The DDL and DML SQL scripts used are shown in Part A(2). Query outputs from executed statements are shown below.
-
-## Query (a) output
-
-```text
-NAME       | STARTSALARY | DEPTID
------------+-------------+-------
-Payne, J.  | 30001       | D50
-Flavel, K. | 30001       | D30
-Wang, F.   | 19001       | D30
-Keita, J.  | 17000       | D10
-Patel, R.  | 17000       | D10
-Smith, B.  | 30001       | D10
-```
-
-## Query (b) output
-
-```text
-SCHEME_NAME | EMPLOYEE_COUNT
-------------+---------------
-AXA         | 0
-Premier     | 3
-Stakeholder | 1
-Standard    | 2
-```
-
-## Query (c) output
-
-```text
-TOTAL_NON_MANAGERS_OVER_35K
-----------------------------
-1
-```
-
-## Query (d) output
-
-```text
-EMPID | EMPLOYEE_NAME | MANAGER_NAME
-------+---------------+--------------
-E101  | Keita, J.     | Smith, B.
-E102  | Patel, R.     | Smith, B.
-E110  | Smith, B.     | NULL
-E301  | Wang, F.      | Flavel, K.
-E310  | Flavel, K.    | NULL
-E501  | Payne, J.     | Flavel, K.
-```
-
-# Appendix C: Role Descriptor (Part C3)
-
-**Role Title:** Chief Entrepreneurial Officer, Virgin NanoLaunch  
-**Strategic Purpose:** Lead creation, validation, and scale-readiness of a low-cost small-satellite launch spin-out.
-
-## Competency Cluster 1: Entrepreneurial Opportunity Leadership
-- Opportunity recognition under uncertainty  
-- Affordable-loss decision making  
-- Market sensing and pivot judgment
-
-## Competency Cluster 2: Technical-Commercial Integration
-- Translate engineering milestones into commercial value  
-- Stage-gate discipline and mission assurance governance  
-- Systems thinking across product, operations, and risk
-
-## Competency Cluster 3: Ecosystem and Stakeholder Orchestration
-- Regulator engagement and compliance coordination  
-- Partnerships with suppliers, research institutions, and anchor customers  
-- Investor and board communication under uncertainty
-
-## Competency Cluster 4: Culture and Team Leadership
-- Psychological safety building in high-risk technical teams  
-- Cross-functional decision quality and conflict resolution  
-- Specialist talent attraction and retention
-
-## KPIs
-- Gate progression performance  
-- Cost-to-launch trend and reliability metrics  
-- Signed customer commitments and repeat mission rate  
-- Regulatory milestone completion without major non-conformities  
-- Team psychological safety and specialist retention rate
-
-## Person Specification
-- Proven leadership in early-stage complex technology ventures  
-- Strong understanding of aerospace/space operations and safety systems  
-- Ability to lead under uncertainty and constrained resources  
-- Strong ethical judgment and governance mindset  
-- High learning agility and stakeholder credibility
-
-# Appendix D: Generative AI Use Declaration (Complete as Applicable)
-
-If no Generative AI tools were used, state:  
-"No Generative AI tools were used in preparing this submission."
-
-If Generative AI tools were used, include:
-- Tool/app name  
-- Purpose of use (e.g., idea generation, planning support)  
-- Prompts entered  
-- Output evidence/screenshots  
-- Where AI-informed content appears in the report
