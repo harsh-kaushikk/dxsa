@@ -32,7 +32,6 @@
 3.4 C4 GDPR and Data/AI Ethics: Constraint and Enabler  
 3.5 References for Part C  
 4. Conclusion  
-5. Appendices  
 
 \newpage
 
@@ -167,8 +166,7 @@ COMMIT;
 ```text
 SQL> INSERT INTO Department VALUES ('D10','Administration');
 1 row created.
-...
-SQL> INSERT INTO Employee VALUES ('E501', ...);
+SQL> INSERT INTO Employee VALUES ('E501','Payne, J.','7 heap street',TO_DATE('09/02/72','DD/MM/RR'),'Analyst','S5','D50','E310','S121');
 1 row created.
 
 SQL> COMMIT;
@@ -402,7 +400,17 @@ Renko et al. (2015) define entrepreneurial leadership as mobilizing teams toward
 
 For NanoLaunch, five attributes are critical. Kirznerian alertness (Kirzner, 1997) supports detection of under-served mission niches. Bricolage capability (Baker & Nelson, 2005) supports resource recombination in constrained environments. Ambidexterity (Tushman & O’Reilly, 1996) supports balance between exploration and selective leverage of parent capabilities. Structural-hole bridging (Burt, 2004) supports ecosystem influence across regulators, suppliers, technical partners, and anchor buyers. Psychological safety stewardship (Edmondson, 1999) supports early error reporting and constructive technical challenge.
 
-In line with the assignment requirement, the complete role descriptor is provided in **Appendix A** and is directly grounded in this C3 analysis.
+### Role descriptor: Chief Entrepreneurial Officer, Virgin NanoLaunch
+**Strategic purpose:** Lead venture creation, validation, and scale-readiness while balancing innovation speed, reliability, and governance.
+
+**Competency cluster 1 (entrepreneurial cognition):** opportunity recognition under uncertainty, affordable-loss judgment, market-sensing and pivot discipline.  
+**Competency cluster 2 (technical-commercial integration):** translation of technical milestones into commercial value, stage-gate discipline, mission assurance decision-making.  
+**Competency cluster 3 (stakeholder orchestration):** regulator engagement, partnership development, and investor/board communication under uncertainty.  
+**Competency cluster 4 (culture leadership):** psychological safety creation, cross-functional decision quality, and specialist talent retention.
+
+**Core KPIs:** gate progression quality, reliability trend, customer commitment conversion, compliance milestone completion, team psychological safety and retention indicators.
+
+**Person specification:** proven leadership in early-stage technology ventures, high competence in cross-functional stakeholder governance, strong ethical judgment, and demonstrated capability in operating under uncertainty.
 
 ## C4) GDPR and data/AI ethics: constraint and strategic enabler
 GDPR and data/AI ethics can constrain rapid experimentation, but in regulated markets they are often strategic enablers when embedded from design stage. Constraint-side effects include Article 6 lawful-basis requirements, Article 22 safeguards around high-impact automated decisions, and retention/erasure tensions that limit unchecked data accumulation (European Union, 2016).
@@ -435,49 +443,3 @@ Tushman, M. L., & O’Reilly, C. A. (1996). Ambidextrous organizations. *Califor
 
 # Conclusion
 This report addressed all required components of the assignment in one integrated document. Part A delivered a scenario-aligned ER design with relational schema conversion, SQL implementation, and a critical evaluation of the MySQL-to-MongoDB migration. Part B diagnosed leadership and cultural challenges using theory-led analysis and proposed a practical 2025–2035 leadership and people strategy linked to measurable outcomes. Part C appraised management support for a Virgin small-satellite launch spin-out, proposed a multi-dimensional risk framework, defined entrepreneurial leadership requirements, and delivered a balanced legal-ethical evaluation of GDPR and AI governance. Across all sections, the central argument is that long-term performance depends on aligning data architecture, leadership behavior, risk governance, and ethical legitimacy.
-
-\newpage
-
-# Appendices
-
-## Appendix A: Role Descriptor (Part C3 Requirement)
-**Role Title:** Chief Entrepreneurial Officer, Virgin NanoLaunch  
-**Strategic Purpose:** Lead venture creation, validation, and scale-readiness while balancing innovation speed, reliability, and governance.
-
-**Competency Cluster 1 (entrepreneurial cognition):** opportunity recognition under uncertainty, affordable-loss judgment, market-sensing and pivot discipline.  
-**Competency Cluster 2 (technical-commercial integration):** translation of technical milestones into commercial value, stage-gate discipline, mission assurance decision-making.  
-**Competency Cluster 3 (stakeholder orchestration):** regulator engagement, partnership development, and investor/board communication under uncertainty.  
-**Competency Cluster 4 (culture leadership):** psychological safety creation, cross-functional decision quality, and specialist talent retention.  
-
-**Core KPIs:** gate progression quality, reliability trend, customer commitment conversion, compliance milestone completion, team psychological safety and retention indicators.
-
-**Person specification:** proven leadership in early-stage technology ventures, high competence in cross-functional stakeholder governance, strong ethical judgment, and demonstrated capability in operating under uncertainty.
-
-## Appendix B: SQL Execution-Proof Snippets (Part A2 Evidence)
-```text
-SQL> CREATE TABLE Department (...);
-Table created.
-SQL> CREATE TABLE SalaryGrade (...);
-Table created.
-SQL> CREATE TABLE PensionScheme (...);
-Table created.
-SQL> CREATE TABLE Employee (...);
-Table created.
-
-SQL> INSERT INTO Department VALUES ('D10','Administration');
-1 row created.
-...
-SQL> INSERT INTO Employee VALUES ('E501', ...);
-1 row created.
-SQL> COMMIT;
-Commit complete.
-
-SQL> <Query a statement>
-6 rows selected.
-SQL> <Query b statement>
-4 rows selected.
-SQL> <Query c statement>
-1 row selected.
-SQL> <Query d statement>
-6 rows selected.
-```
